@@ -6,7 +6,8 @@
 var express = require('express');
 var routes = require('./routes');
 
-var awesome = require('./controllers/word/awesome');
+var controllers = require('./controllers');
+//var awesome = require('./controllers/word/awesome');
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -30,12 +31,13 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
+//app.get('/', routes.index);
+app.get('/', controllers.index);
 /*app.get(‘/users/:user’, function(req, res) { 
 	res.send(‘Welcome to the profile of ’ + req.params.user + ‘!’); 
 });*/
 //app.get('/word/awesome', function(req, res) { res.send('Welcome to the profile of Semmy Purewal'); });
-app.get('/words/:word', routes.word);
+app.get('/words/:word', controllers.word);
 //app.get('/', routes.server);
 //app.get('/word/awesome', awesome.index);
 //app.get('/word/:words', controller.index);

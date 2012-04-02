@@ -31,8 +31,13 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
-app.get('/', routes.server);
-app.get('/word/awesome', awesome.index);
+/*app.get(‘/users/:user’, function(req, res) { 
+	res.send(‘Welcome to the profile of ’ + req.params.user + ‘!’); 
+});*/
+//app.get('/word/awesome', function(req, res) { res.send('Welcome to the profile of Semmy Purewal'); });
+app.get('/words/:word', routes.word);
+//app.get('/', routes.server);
+//app.get('/word/awesome', awesome.index);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

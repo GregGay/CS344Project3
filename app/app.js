@@ -38,6 +38,7 @@ app.get('/', routes.index);
 app.get('/words/:word', routes.word);
 //app.get('/', routes.server);
 //app.get('/word/awesome', awesome.index);
+//app.get('/word/:words', controller.index);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

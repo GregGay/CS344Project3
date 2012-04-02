@@ -9,7 +9,11 @@ exports.index = function(req, res){
 	client.get('awesome', function (err, count) {
 		if(err) console.log(err);
 		else {
-		res.render('/controllers/word/awesome', {awesomeCount:count});
+		res.render('/word/awesome', {awesomeCount:count})
 		}
 	});
+};
+
+exports.word = function(req, res) { 
+	res.send('Welcome to the profile of the ' + req.params.word + ' words!')
 };

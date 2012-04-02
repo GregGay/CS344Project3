@@ -8,5 +8,5 @@ exports.index = function(req, res){
 };
 
 exports.word = function(req, res) { 
-	res.send('Welcome to the profile of the ' + req.params.word + ' words!'); 
+	res.send('Welcome to the profile of the ' + req.params.word + ' words!')
 };

@@ -22,6 +22,6 @@ exports.word = function(req, res) {
   res.render('index', { title: 'Express' })
 };
 
-exports.word = function(req, res) { 
-	res.send('Welcome to the profile of the ' + req.params.word + ' words!')
+exports.words = function(req, res) { 
+	res.send('Welcome to the profile of the ' + req.params.words + ' words!')
 };

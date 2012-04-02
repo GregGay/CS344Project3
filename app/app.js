@@ -7,7 +7,8 @@ var express = require('express');
 var routes = require('./routes');
 
 var controllers = require('./controllers');
-//var awesome = require('./controllers/word/awesome');
+var awesome = require('./controllers/word/awesome');
+var cool = require('./controllers/word/cool');
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -37,10 +38,11 @@ app.get('/', controllers.index);
 	res.send(‘Welcome to the profile of ’ + req.params.user + ‘!’); 
 });*/
 //app.get('/word/awesome', function(req, res) { res.send('Welcome to the profile of Semmy Purewal'); });
-app.get('/words/:word', controllers.word);
+//app.get('/word/:words', controllers.words);
 //app.get('/', routes.server);
-//app.get('/word/awesome', awesome.index);
-//app.get('/word/:words', controller.index);
+app.get('/word/awesome', awesome.index);
+app.get('/word/cool', cool.index);
+//app.get('/word/:words', controllers.index);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

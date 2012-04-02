@@ -6,14 +6,23 @@ exports.index = function(req, res){
 	student.dropClass('CSCI344');
 		res.render('student', {name:student.name, age:student.age});
 	});*/
-	client.get('awesome', function (err, count) {
+	client.get('cool', function (err, count) {
 		if(err) console.log(err);
 		else {
-		res.render('word/awesome', {awesomeCount:count})
+		res.render('word/cool', {coolCount:count})
 		}
 	});
 };
 /*
 exports.word = function(req, res) { 
+	res.send('Welcome to the profile of the ' + req.params.word + ' words!')
+};
+*/
+	/*Student.find('semmy', function(student) {
+	student.dropClass('CSCI344');
+		res.render('student', {name:student.name, age:student.age});
+	});*/
+	/*
+	exports.word = function(req, res) { 
 	res.send('Welcome to the profile of the ' + req.params.word + ' words!')
 };*/

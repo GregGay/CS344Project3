@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="mystyle.css" />
 		<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
-		<link rel="shortcut icon" type="image/x-icon" href="ultiLogo.jpg" />
+		<link rel="shortcut icon" type="image/x-icon" href="/images/bird_icon.ico" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>	
 		<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script>
 	</head>
@@ -12,10 +12,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="span6">
-					<img src="images/twitterVideo2.png" alt="Logo" width="400" height=400" />
+					<img src="/images/twitterVideo2.png" alt="Logo" width="350" height=350" />
 				</div>
-				<div class="span5 offset5">
-					<h1>NAV BAR GOES HERE!</h1>
+				<div class="span7 offset3">
+					<ul class="pills">
+						<li class="active"><a href="http://localhost:3000">Home</a></li>
+						<li><a href="http://localhost:3000/word/about">About</a></li>
+						<li><a href="http://localhost:3000/word/awesome">Awesome</a></li>
+						<li><a href="http://localhost:3000/word/cool">Cool</a></li>
+					</ul>
 				</div>
 			</div>
 		</div>		
@@ -29,7 +34,6 @@
 				</div>
 			</div>
 		</div>
-
 		<%- body %>
 	</body>
 </html>

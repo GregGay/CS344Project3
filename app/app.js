@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -9,6 +8,7 @@ var routes = require('./routes');
 var controllers = require('./controllers');
 var awesome = require('./controllers/word/awesome');
 var cool = require('./controllers/word/cool');
+var about = require('./controllers/word/about');
 var app = module.exports = express.createServer();
 
 // Configuration
@@ -34,15 +34,9 @@ app.configure('production', function(){
 
 //app.get('/', routes.index);
 app.get('/', controllers.index);
-/*app.get(‘/users/:user’, function(req, res) { 
-	res.send(‘Welcome to the profile of ’ + req.params.user + ‘!’); 
-});*/
-//app.get('/word/awesome', function(req, res) { res.send('Welcome to the profile of Semmy Purewal'); });
-//app.get('/word/:words', controllers.words);
-//app.get('/', routes.server);
 app.get('/word/awesome', awesome.index);
 app.get('/word/cool', cool.index);
-//app.get('/word/:words', controllers.index);
+app.get('/word/about', about.index);
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
